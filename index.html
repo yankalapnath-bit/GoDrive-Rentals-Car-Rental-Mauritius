@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoDrive Rentals | Mauritius Car Rental</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+        
+        body {
+            background: #f4f6f9;
+        }
+        /* ===== NAVBAR ===== */
+        
+        header {
+            background: #0b3d91;
+            padding: 15px 60px;
+            display: flex;
+            align-items: center;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        
+        .logo img {
+            height: 45px;
+            margin-right: 10px;
+            border-radius: 6px;
+        }
+        /* ===== HERO ===== */
+        
+        .hero {
+            height: 90vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("header.jpeg");
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+        
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        
+        .hero button {
+            padding: 14px 35px;
+            border: none;
+            border-radius: 6px;
+            background: #ffd700;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        /* ===== SECTIONS ===== */
+        
+        section {
+            padding: 70px 20px;
+            text-align: center;
+        }
+        
+        .about {
+            background: white;
+        }
+        
+        .about p {
+            max-width: 900px;
+            margin: auto;
+            font-size: 18px;
+            line-height: 1.7;
+            color: #444;
+        }
+        /* ===== SERVICES ===== */
+        
+        .service-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+        
+        .service-card {
+            background: white;
+            width: 280px;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            transition: 0.3s;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-8px);
+        }
+        
+        .service-card i {
+            font-size: 40px;
+            color: #0b3d91;
+            margin-bottom: 15px;
+        }
+        /* ===== CAR ===== */
+        
+        .cars img {
+            width: 400px;
+            max-width: 90%;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+        /* ===== MAP ===== */
+        
+        .map-container {
+            max-width: 1000px;
+            margin: auto;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+        /* ===== BOOKING ===== */
+        
+        .booking {
+            background: #0b3d91;
+            color: white;
+        }
+        
+        .booking form {
+            max-width: 500px;
+            margin: auto;
+        }
+        
+        .booking input,
+        .booking select {
+            width: 100%;
+            padding: 14px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 6px;
+        }
+        
+        .booking button {
+            width: 100%;
+            padding: 14px;
+            background: #ffd700;
+            border: none;
+            font-weight: bold;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        /* ===== FOOTER ===== */
+        
+        footer {
+            background: #111;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+        /* ===== WHATSAPP FLOAT ===== */
+        
+        .whatsapp-float {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            width: 65px;
+            height: 65px;
+            background: #25D366;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 32px;
+            line-height: 65px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header>
+        <div class="logo">
+            <img src="logo.jpeg" alt="GoDrive Logo"> GoDrive Rentals
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div>
+            <h1>Explore Mauritius with GoDrive Rentals</h1>
+            <button onclick="scrollBooking()">Book Now</button>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about">
+        <h2>About GoDrive Rentals</h2>
+        <br>
+        <p>
+            GoDrive Rentals is a reliable and customer-focused car rental company in Mauritius, offering affordable daily rentals, airport transfers, and family vehicles. We ensure safe, punctual, and stress-free travel across the island.
+        </p>
+    </section>
+
+    <!-- SERVICES -->
+    <section>
+        <h2>Our Services</h2>
+        <div class="service-container">
+            <div class="service-card">
+                <i class="fas fa-plane-arrival"></i>
+                <h3>Airport Transfers</h3>
+                <p>Pickup and drop-off anywhere in Mauritius.</p>
+            </div>
+
+            <div class="service-card">
+                <i class="fas fa-car"></i>
+                <h3>Daily Rentals</h3>
+                <p>Affordable daily and weekly packages.</p>
+            </div>
+
+            <div class="service-card">
+                <i class="fas fa-users"></i>
+                <h3>Family Vehicles</h3>
+                <p>Comfortable cars for family trips.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CAR -->
+    <section class="cars">
+        <h2>Our Vehicle</h2>
+        <br>
+        <img src="car1.jpeg" alt="Rental Car">
+    </section>
+
+    <!-- MAP -->
+    <section>
+        <h2>Find Us in Mauritius</h2>
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps?q=Mauritius&output=embed" width="100%" height="450" style="border:0;" loading="lazy"></iframe>
+        </div>
+    </section>
+
+    <!-- BOOKING -->
+    <section class="booking" id="booking">
+        <h2>Book Your Ride</h2>
+        <form onsubmit="sendToWhatsApp(); return false;">
+            <input type="text" id="name" placeholder="Full Name" required>
+            <input type="email" id="email" placeholder="Email Address" required>
+            <input type="date" id="pickup" required>
+
+            <select id="car" required>
+            <option value="">Select Car</option>
+            <option>Honda Fit</option>
+            <option>Toyota Vitz</option>
+            <option>Nissan Note</option>
+        </select>
+
+            <button type="submit">Send Booking via WhatsApp</button>
+        </form>
+    </section>
+
+    <footer>
+        © 2026 GoDrive Rentals | Mauritius Car Rental
+    </footer>
+
+    <a href="https://wa.me/23058504169" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        function scrollBooking() {
+            document.getElementById("booking")
+                .scrollIntoView({
+                    behavior: "smooth"
+                });
+        }
+
+        function sendToWhatsApp() {
+
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let pickup = document.getElementById("pickup").value;
+            let car = document.getElementById("car").value;
+
+            let message = `Hello GoDrive Rentals!
+Name: ${name}
+Email: ${email}
+Pickup Date: ${pickup}
+Car: ${car}`;
+
+            let url = "https://wa.me/23058504169?text=" + encodeURIComponent(message);
+            window.open(url, "_blank");
+        }
+    </script>
+
+</body>
+
+</html>
